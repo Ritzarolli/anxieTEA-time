@@ -1,0 +1,33 @@
+public class Project2 {
+    public static void main(String [] args){
+        Song s1 = new Song();
+        
+        s1.setSong("Blackbird", "Lennon-McCartney", "The Beatles", 2.19f, "Pop", 1968);
+        s1.toString();
+        System.out.println(s1.toString());
+        
+        Song s2 = new Song();
+        
+        s2.setSong("Carry On My Wayward Son", "Kerry Livgren", "Kansas", 5.21f, "Rock", 1976);
+        s2.toString();
+        System.out.println(s2.toString());
+        
+        Song s3 = new Song();
+        
+        s3.setSong("Come Together", "Lennon-McCartney", "The Beatles", 4.21f, "Pop", 1969);
+        s3.toString();
+        System.out.println(s3.toString());
+        
+        Song s4 = new Song();
+        
+        s4.setSong("Crazy Little Thing Called Love", "Freddie Mercury", "Queen", 4.42f, "Rock", 1980);
+        s4.toString();
+        System.out.println(s4.toString());
+        
+        SongList first = new SongList();
+        first.addSong(s1);
+        first.addSong(s2);
+        
+        // more to come. This is incomplete until SongList class is complete.
+    }
+}
