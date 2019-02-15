@@ -1,0 +1,124 @@
+public class Song {
+    
+    private String title;   // the title of the song
+    private String writer;  // the person who wrote the song/lyrics
+    private String singer;  // the person/band who performs the song
+    private float duration; // the length of the song in minutes
+    private String genre;   // the song's style category
+    private int year;       // the year the song was released
+    
+    /**
+     * This is the constructor for Song that sets all fields to empty.
+     */
+    
+    public Song ()
+    {
+        title = "";
+        writer = "";
+        singer = "";
+        duration = 0.0f;
+        genre = "";
+        year = 0;
+    }
+    
+    /**
+     * This method assigns values to the corresponding fields of song information.
+     * @param getTitle
+     * @param getWriter
+     * @param getSinger
+     * @param getDuration
+     * @param getGenre
+     * @param getYear 
+     */
+    public void setSong (String getTitle, 
+                            String getWriter, 
+                            String getSinger, 
+                            float getDuration, 
+                            String getGenre, 
+                            int getYear)
+    {
+        if (getTitle != ""){
+            title = getTitle;
+        }
+        if (getWriter != ""){
+            writer = getWriter;
+        }
+        if (getSinger != ""){
+            singer = getSinger;
+        }
+        if (getDuration > 0){
+            duration = getDuration;
+        }
+        if (getGenre != ""){
+            genre = getGenre;
+        }
+        if ((getYear > 1400) && (getYear <= 2018))
+        {
+            year = getYear;
+            }
+        }
+    
+    /**
+     * The method assigns a title of a song. 
+     * @return  
+     */
+    public String getTitle()
+    {
+        return title;
+    }
+    
+    /**
+     * This method assigns a writer of a song.
+     * @return 
+     */
+    public String getWriter()
+    {
+        return writer;
+    }
+    
+    /**
+     * This method assigns a singer of a song.
+     * @return 
+     */
+    public String getSinger()
+    {
+        return singer;
+    }
+    
+    /**
+     * This method assigns the duration of a song.
+     * @return 
+     */
+    public float getDuration()
+    {
+        return duration;
+    }
+    
+    /**
+     * This method assigns the genre of a song.
+     * @return 
+     */
+    public String getGenre()
+    {
+        return genre;
+    }
+    
+    /**
+     * This method assigns the year that a song was released.
+     * @return 
+     */
+    public int getYear()
+    {
+        return year;
+    }
+    
+    /**
+     * This method gathers all the information pertaining to a song and places it into a multi-line String.
+     * @return 
+     */
+    public String toString() {
+        return "Song Information —\n" + "\tTitle: " + title + "\n \tSinger: " 
+                + singer + "\n \tDuration: " + duration + " minutes\n \tGenre: " 
+                + genre + "\n \tYear: " + year + "\n \tWriter: " + writer;
+    }
+}
